@@ -1,0 +1,9 @@
+<activity name="Seesaw Sorter" mode = "2" randomizeOrder="0">
+<questions>
+		<question img="apple.png" snd="apple.mp3" wrd="apple" />
+		<question img="boy.png" snd="boy.mp3" wrd="boy" />   
+		<question img="cake.png" snd="cake.mp3" wrd="cake" />   
+		<question img="door.png" snd="door.mp3" wrd="door" />
+		<question img="elephant.png" snd="elephant.mp3" wrd="elephant" />     	
+</questions>
+</activity>	

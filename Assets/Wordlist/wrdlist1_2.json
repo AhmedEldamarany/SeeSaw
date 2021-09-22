@@ -1,0 +1,36 @@
+{
+   "activity": {
+      "questions": {
+         "question": [
+            {
+               "img": "apple.png",
+               "snd": "apple.mp3",
+               "wrd": "apple"
+            },
+            {
+               "img": "boy.png",
+               "snd": "boy.mp3",
+               "wrd": "boy"
+            },
+            {
+               "img": "cake.png",
+               "snd": "cake.mp3",
+               "wrd": "cake"
+            },
+            {
+               "img": "door.png",
+               "snd": "door.mp3",
+               "wrd": "door"
+            },
+            {
+               "img": "elephant.png",
+               "snd": "elephant.mp3",
+               "wrd": "elephant"
+            }
+         ]
+      },
+      "name": "Seesaw Sorter",
+      "mode": "2",
+      "randomizeOrder": "0"
+   }
+}
