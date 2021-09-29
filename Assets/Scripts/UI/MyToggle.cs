@@ -5,6 +5,7 @@ using UnityEngine;
 public class MyToggle : MonoBehaviour
 {
     [SerializeField] GameObject ObjectToToggle;
+    [SerializeField] GameObject ObjectToToggle2;
    
     public void Toggle()
     {
@@ -13,5 +14,12 @@ public class MyToggle : MonoBehaviour
         else 
             ObjectToToggle.SetActive(true);
     }
-
+    public void ToggleBoth()
+    {
+        Toggle();
+        if (ObjectToToggle2.activeInHierarchy)
+            ObjectToToggle2.SetActive(false);
+        else
+            ObjectToToggle2.SetActive(true);
+    }
 }

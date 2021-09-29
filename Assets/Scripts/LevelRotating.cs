@@ -4,7 +4,7 @@ public class LevelRotating : MonoBehaviour
 {
     Vector3 tilt;
     [SerializeField] float rotSpeed = .5f;
-    [SerializeField] float tiltDamping = .2f;
+    [SerializeField] float tiltDamping = .1f;
 
     
 
@@ -27,4 +27,5 @@ public class LevelRotating : MonoBehaviour
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, .1f);
     }
+
 }

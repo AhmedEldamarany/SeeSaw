@@ -1,14 +1,15 @@
-
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 
 public class WPFeeding : DataFeeder
 {
+    [SerializeField] SpriteRenderer leftImage;
+    [SerializeField] SpriteRenderer rightImage;
+    [SerializeField] TMP_Text cardBox;
     [SerializeField] TMP_Text leftText;
     [SerializeField] TMP_Text rightText;
-    [SerializeField] SpriteRenderer cardBox;
-
+    QuestionSO randomQuestion;
     void Start()
     {
         Feed();
@@ -17,24 +18,28 @@ public class WPFeeding : DataFeeder
     protected override void Feed()
     {
         base.Feed();
-        if(currentQuestion.data!=null)
+        if (currentQuestion.data != null)
         {
-            cardBox.sprite = currentQuestion.data.Img;
-            if(Random.Range(1,10)>5)
+             randomQuestion = questionList.GetRandom();
+            cardBox.text = currentQuestion.data.Word;
+            if (Random.Range(1, 10) > 5)
             {
+                leftImage.sprite = currentQuestion.data.Img;
+                rightImage.sprite =randomQuestion.Img;
                 leftText.text = currentQuestion.data.Word;
-                rightText.text = questionList.GetRandom().Word;
+                rightText.text = randomQuestion.Word;
                 currentQuestion.tag = CurrentQuestion.left;
             }
             else
             {
+                rightImage.sprite = currentQuestion.data.Img;
+                leftImage .sprite= randomQuestion.Img;
                 rightText.text = currentQuestion.data.Word;
-                leftText.text = questionList.GetRandom().Word;
+                leftText.text = randomQuestion.Word;
                 currentQuestion.tag = CurrentQuestion.right;
             }
-            
+
 
         }
     }
-   
 }
